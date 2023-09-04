@@ -1,6 +1,8 @@
 :root{
   font-size: calc(1vw + .45rem);
   box-sizing: border-box;
+  --white-like:#f7f2ec;
+  --purple : purple ;
 }
 
 *,
@@ -9,40 +11,145 @@
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+  font-family: cursive;
 }
 
 body{
-  max-width: 1080px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 0 auto;
   background: linear-gradient(90deg, lightblue,rgb(245, 148, 224));  
+  padding: .1em .5em;
 }
 
 .card{
   list-style: none;
 }
 
-
-
 .navbar{
     display: flex;
     justify-content: normal;
     align-items: center;
-    font-size: 1.55em;
+    font-size: 1.2em;
     gap: 1em;
+    padding: .2em 0;
+}
+
+.links{
+  margin-left: auto;
+}
+.navbar .links > a{
+  padding: 0.2em 1.21em;
+  text-decoration: none;
+  color: rgb(79, 79, 248);
+  box-shadow: 5px 5px 6px white;
+  margin-left: 0.5em;
+  background-color:  transparent;
+  border-radius: 0.2em;
+  color: purple;
+}
+
+.logo > a > svg :hover  {
+   color : var(--white-like) 
+}
+
+.navbar .links >a:hover{
+  color : var(--white-like);
+  background-color: var(--purple);
+  
+}
+
+.logo > a > svg :hover{
+  color: var(--purple)
+}
+
+.main-content{
+  padding: 1em .5em;
+  display: flex;
+  column-gap: 1.5em;
+}
+
+.side{
+  flex: 1 1;
+  display: flex;
+  row-gap: 0.3em;
+  flex-direction: column;
+}
+.main{
+  flex: 3;
+}
+
+.btn{
+  font-size: 1.2em;
+    padding: 0.3em 2.7em;
+    border: none;
+    border-radius: 0.2em;
+    color: purple;
+    background-color: #f7f2ec;
+    transition: hover 2sec;
+}
+.btn:hover{
+  background-color: purple;
+  color: #f7f2ec;
+}
+
+.btn-end{
+   margin-top: auto;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.main > img{
+  width: 29.5em;
+}
+
+.main> p{
+  position: absolute;
+}
+
+.notes{
+  display: flex;
+    flex-direction: column;
+    row-gap: 0.45em;
+}
+
+
+.note{
+  border: 2px solid white;
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: .41em;
+  box-shadow: 3px 3px 7px white;
+  transition: hover .4sec;
+}
+.note:hover{
+  background-color:rgb(245, 148, 224);
+}
+.note > h3:hover{
+  color: #f7f2ec;
+}
+.btn-svg{
+    padding: 0.3em;
+    border-radius: 0.35em;
+    border: none;
+    color: purple;
+}
+.group-btn{
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+
+.btn-svg > svg{
+  font-size: 2.3em;
+}
+
+.note > h3{
+    color: purple;
     font-weight: 600;
+    font-size: 1.4em;
 }
-.navbar > a{
-    padding: .7em .21em;
-    background: linear-gradient(90deg, rgb(75, 1, 53),rgb(2, 129, 33));  
-    text-decoration: none;
-    background-clip:text;    
-    color: transparent;
-}
-
-
-.navbar > a:hover{
-  transform: scale(1.1);
-}
-
-
