@@ -1,26 +1,12 @@
 import React from 'react';
 import {AiOutlineSend,AiOutlineStar,AiOutlineCheck} from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import Sidebar from '../components/Sidebar';
 
 const MainPage = () => {
   return (
     <div className='main-content'>
-        <aside className='side'>
-            <Link to={"/addnote"} className="btn">
-                Add Note
-            </Link>
-            <Link to={"/notes"} className="btn">
-                All Notes
-            </Link>
-            <button className="btn">
-                Completed 
-            </button>
-            <button className="btn">
-                Favourite 
-            </button>
-             
-            <button className='btn btn-end'>Explore!</button>
-        </aside>
+        <Sidebar/>
         <main className='main'>
             <div className="notes">
                 <div className="note">

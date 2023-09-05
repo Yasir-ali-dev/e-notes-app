@@ -21,7 +21,14 @@ body{
 
 .card{
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 0.5em;
 }
+
+
+/* navbar */
+
 
 .navbar{
     display: flex;
@@ -35,6 +42,7 @@ body{
 .links{
   margin-left: auto;
 }
+
 .navbar .links > a{
   padding: 0.2em 1.21em;
   text-decoration: none;
@@ -45,20 +53,21 @@ body{
   border-radius: 0.2em;
   color: purple;
 }
-
 .logo > a > svg :hover  {
    color : var(--white-like) 
 }
-
 .navbar .links >a:hover{
   color : var(--white-like);
   background-color: var(--purple);
   
 }
-
 .logo > a > svg :hover{
   color: var(--purple)
 }
+
+
+/*  */
+
 
 .main-content{
   padding: 1em .5em;
@@ -196,3 +205,46 @@ body{
   font-size: 1.2em;
 }
 
+
+/* contact us page */
+
+.contact-us-page{
+  display: flex;
+}
+.contact-form{
+  flex: 1;
+}
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.7em;
+}
+
+.heading{
+  text-align:left;
+  font-size: 1.5em;
+  color: purple;
+  padding: 0.4em 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-form >.heading{
+  text-align: center;
+}
+
+.contact-form > form > * {
+  display: block;
+  padding: 0.5em 0.7em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: purple;
+}
+
+.social-info{
+  flex: 1;
+}
+.information{
+  flex:1;
+}

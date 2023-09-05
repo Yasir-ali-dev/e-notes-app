@@ -4,6 +4,7 @@ import NotesList from "./components/NotesList";
 
 import TasksContext from "./components/TasksContext";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import MainPage from "./pages/MainPage";
 
 import { Routes, Route } from "react-router";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/addnote" element={<AddNote />} />
           <Route path="/notes" element={<NotesList />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Route>
       </Routes>
     </TasksContext>

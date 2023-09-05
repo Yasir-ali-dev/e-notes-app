@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link to={"/notes"}>Notes</Link>
           <a href="#">Blog</a>
           <Link to={"/about"}>About Us</Link>
-          <a href="_#">Contact Us</a>
+          <a href="/contact">Contact Us</a>
         </div>
       </nav>
     </header>
