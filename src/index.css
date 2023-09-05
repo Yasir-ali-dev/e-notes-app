@@ -84,6 +84,8 @@ body{
     color: purple;
     background-color: #f7f2ec;
     transition: hover 2sec;
+    text-decoration: none;
+    text-align: center;
 }
 .btn:hover{
   background-color: purple;
@@ -153,3 +155,44 @@ body{
     font-weight: 600;
     font-size: 1.4em;
 }
+
+
+
+/* about page */
+
+.about-page{
+  display: flex;
+  column-gap: 1.1em;
+}
+.about-img{
+  flex: 1;
+  padding: 0.1em 0.5em;
+  position: relative;
+}
+.about-img > h1{
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  color: purple;
+  text-shadow: 3px 3px 7px #e32cc4;
+  transition: hover .3sec;
+}
+
+.about-img > img{
+  width: 100%;
+  border: none;
+  height: 100%;
+  border-radius: 0.21em;
+  box-shadow: 7px 3px 11px 1px purple;
+}
+.about-page-info{
+  flex: 1;
+}
+.about-page-info > section > h2{
+  color: var(--purple);
+}
+
+.about-page-info > section > p{
+  font-size: 1.2em;
+}
+

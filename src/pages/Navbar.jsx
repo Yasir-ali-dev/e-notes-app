@@ -1,20 +1,21 @@
 import React from 'react'
 
-import {AiFillAliwangwang,AiFillCopy} from "react-icons/ai";
+import {AiFillCopy} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <header>
       <nav className='navbar'>
         <div className="logo">
-          <a href="@#">
+          <Link to={"/"}>
             <AiFillCopy size={"2em"} />
-          </a>
+          </Link>
         </div>
         <div className="links">
-          <a href="##">Notes</a>
+          <Link to={"/notes"}>Notes</Link>
           <a href="#">Blog</a>
-          <a href="#">About Us</a>
+          <Link to={"/about"}>About Us</Link>
           <a href="_#">Contact Us</a>
         </div>
       </nav>
