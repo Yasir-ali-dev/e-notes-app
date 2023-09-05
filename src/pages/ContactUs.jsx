@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 const ContactUs = () => {
   return (
@@ -15,12 +16,29 @@ const ContactUs = () => {
         </div>
         <div className="social-info">
             <h3 className='heading'>Social Links</h3>
-            <a href="@">LinkedIn</a>
-            <a href="@">Twitter</a>
-            <a href="@">Instagram</a>
-            <a href="@">Github</a>
-            <a href="@">Facbook</a>
+            <div className="link">        
+                <BsLinkedin color='blue' size={"2em"}/>
+                <a href="@">LinkedIn</a>
+            </div>    
+            <div className="link">        
+                <BsTwitter color='blue' size={"2em"}/>
+                <a href="@">Twitter</a>
+            </div>    
             
+            <div className="link">        
+                <BsInstagram color='red' size={"2em"}/>
+                <a href="@">Instagram</a>
+            </div>    
+            
+            <div className="link">        
+                <BsGithub size={"2em"}/>
+                <a href="@">Github</a>
+            </div>    
+            <div className="link">        
+                <BsFacebook color='blue' size={"2em"}/>
+                <a href="@">Facebook</a>
+            </div>    
+        
         </div>
         <div className="information">
             <h3 className='heading'>Contact information</h3>
