@@ -43,7 +43,7 @@ body{
   margin-left: auto;
 }
 
-.navbar .links > a{
+.a-link{
   padding: 0.2em 1.21em;
   text-decoration: none;
   color: rgb(79, 79, 248);
@@ -52,7 +52,9 @@ body{
   background-color:  transparent;
   border-radius: 0.2em;
   color: purple;
+  border: none;
 }
+
 .logo > a > svg :hover  {
    color : var(--white-like) 
 }
@@ -274,4 +276,25 @@ body{
 
 .information{
   flex:1;
+}
+
+
+/* not-form  */
+
+.note-form{
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  gap: .5em;
+}
+
+.note-input{
+    padding: 0.5em 1.5em;
+    display: block;
+    border: none;
+    gap: .5em;
+    border-radius: 7px;
+}
+.btn-group > button{
+  border: none;
 }

@@ -26,6 +26,7 @@ const AddNote = () => {
       });
     }
   }
+
   const getImage=(e)=>{
     setNote({
       ...note,
@@ -49,6 +50,40 @@ const AddNote = () => {
       image :""
     })
   }
+  const handleUpperCase=(e)=>{
+    e.preventDefault()
+    setNote((prevNote)=> {
+      return{
+        ...prevNote,
+        text : note.text.toUpperCase()
+      } 
+    })
+  }
+
+  const handleLowerCase=(e)=>{
+    e.preventDefault();
+    setNote(prevNote => {
+      return {
+        ...prevNote,
+        text : prevNote.text.toLowerCase()
+      }
+    })
+  }
+
+  const handleCapitalize =(e)=>{
+    e.preventDefault()
+    
+  }
+
+  const handleClear =(e)=>{
+    e.preventDefault();
+    setNote(prevNote => {
+      return {
+        ...prevNote,
+        text : "",
+      }
+    })
+  } 
 
   return (
     <form className='note-form' onSubmit={handleSubmit}>
@@ -58,6 +93,7 @@ const AddNote = () => {
         value={note.title}  
         name='title'
         onChange={handleChange}
+        className='note-input'
       />
 
       <textarea 
@@ -65,23 +101,21 @@ const AddNote = () => {
         placeholder='Enter Description ...'
         value={note.text} 
         onChange={handleChange} 
-        cols="30" 
+        cols="80" 
         rows="10"
         type="text"
+        className='note-input'
+      
       ></textarea>
+      <div className="group-btn">
+        <button className='a-link' onClick={handleUpperCase}>uppercase</button>
+        <button className='a-link' onClick={handleCapitalize}>Capitalize</button>
+        <button className='a-link' onClick={handleLowerCase} >lowercase</button>
+        <button className='a-link' onClick={handleClear}>Clear text</button>
+      </div>
 
-      <label htmlFor="completed">Completed{" "}  
-        <input 
-          type="checkbox"
-          value={note.completed}
-          name='completed'
-          id='completed'
-          onChange={handleChange}
-        />
-      </label>
-      <input type="file" id="select_image" name="image" onChange={getImage} />  
+      <input type="submit" className='btn' value={"Submit!"}/>
 
-      <input type="submit"  value={"Submit!"}/>
     </form>
   )
 }
